@@ -1,0 +1,8 @@
+include:
+  - homepage/docker-compose.yml
+  - plex/docker-compose.yml
+  - prowlarr/docker-compose.yml
+  - radarr/docker-compose.yml
+  - sonarr/docker-compose.yml
+  - transmission/docker-compose.yml
+
