@@ -1,0 +1,16 @@
+plex/config/
+radarr/config/
+sonarr/config/
+prowlarr/config/
+transmission/config/
+
+homepage/config/bookmarks.yaml
+homepage/config/custom.css
+homepage/config/custom.js
+homepage/config/docker.yaml
+homepage/config/kubernetes.yaml
+homepage/config/logs/
+homepage/config/services.yaml
+homepage/config/settings.yaml
+homepage/config/widgets.yaml
+
