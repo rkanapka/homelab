@@ -5,6 +5,18 @@ services:
     environment:
       PUID: 1000 # optional, your user id
       PGID: 1000 # optional, your group id
+      HOMEPAGE_VAR_PLEX_URL: ${PLEX_URL}
+      HOMEPAGE_VAR_PROWLARR_URL: ${PROWLARR_URL}
+      HOMEPAGE_VAR_RADARR_URL: ${RADARR_URL}
+      HOMEPAGE_VAR_SONARR_URL: ${SONARR_URL}
+      HOMEPAGE_VAR_TRANSMISSION_URL: ${TRANSMISSION_URL}
+      HOMEPAGE_VAR_TRANSMISSION_USERNAME: ${TRANSMISSION_USERNAME}
+      HOMEPAGE_VAR_TRANSMISSION_PASSWORD: ${TRANSMISSION_PASSWORD}     
+      HOMEPAGE_VAR_SERVER_IP: ${IP}
+      HOMEPAGE_VAR_PLEX_KEY: ${PLEX_KEY}
+      HOMEPAGE_VAR_PROWLARR_KEY: ${PROWLARR_KEY}
+      HOMEPAGE_VAR_RADARR_KEY: ${RADARR_KEY}
+      HOMEPAGE_VAR_SONARR_KEY: ${SONARR_KEY}
     ports:
       - 3000:3000
     volumes:
@@ -12,3 +24,4 @@ services:
       - ./config/images:/app/public/images
       - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
     restart: unless-stopped
+

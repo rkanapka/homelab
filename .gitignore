@@ -1,3 +1,4 @@
+.env
 plex/config/
 radarr/config/
 sonarr/config/
@@ -10,7 +11,5 @@ homepage/config/custom.js
 homepage/config/docker.yaml
 homepage/config/kubernetes.yaml
 homepage/config/logs/
-homepage/config/services.yaml
-homepage/config/settings.yaml
 homepage/config/widgets.yaml
 

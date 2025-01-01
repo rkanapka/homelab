@@ -1,0 +1,55 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services
+
+- Media Server:
+    - Plex:
+        icon: plex.png
+        href: {{HOMEPAGE_VAR_PLEX_URL}}
+        description: Watch movies and TV shows.
+        widget:
+          type: plex
+          url: {{HOMEPAGE_VAR_PLEX_URL}}
+          key: {{HOMEPAGE_VAR_PLEX_KEY}}
+
+- Torrent:
+    - Transmission:
+        icon: transmission.png
+        href: {{HOMEPAGE_VAR_TRANSMISSION_URL}}
+        server: {{HOMEPAGE_VAR_SERVER_IP}}
+        widget:
+          type: transmission
+          url: {{HOMEPAGE_VAR_TRANSMISSION_URL}}
+          username: {{HOMEPAGE_VAR_TRANSMISSION_USERNAME}}
+          password: {{HOMEPAGE_VAR_TRANSMISSION_PASSWORD}}
+
+- Find Cinemagic:
+    - Prowlarr:
+        icon: prowlarr.png
+        href: {{HOMEPAGE_VAR_PROWLARR_URL}}
+        description: Indexes 😎
+        widget:
+          type: prowlarr
+          url: {{HOMEPAGE_VAR_PROWLARR_URL}}
+          key: {{HOMEPAGE_VAR_PROWLARR_KEY}}
+
+    - Radarr:
+        icon: radarr.png
+        href: {{HOMEPAGE_VAR_RADARR_URL}}
+        description: Download movies 😎
+        widget:
+          type: radarr
+          url: {{HOMEPAGE_VAR_RADARR_URL}}
+          key: {{HOMEPAGE_VAR_RADARR_KEY}}
+          enableQueue: true # optional, defaults to false
+
+    - Sonarr:
+        icon: sonarr.png
+        href: {{HOMEPAGE_VAR_SONARR_URL}}
+        description: Download tv shows 😎
+        widget:
+          type: sonarr
+          url: {{HOMEPAGE_VAR_SONARR_URL}}
+          key: {{HOMEPAGE_VAR_SONARR_KEY}}
+          enableQueue: true # optional, defaults to false
+
