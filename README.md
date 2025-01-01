@@ -55,7 +55,7 @@ Used to manage CPU & GPU temperatures by controlling a 5V fan through GPIO.
 docker-compose --env-file ~/homelab/.env up -d
 ```
 
-4. You will have to additionally configure Plex, Prowlarr, SOnnar, Radarr & Transimission settings via UI.
+4. You will have to additionally configure Plex, Prowlarr, Sonnar, Radarr & Transimission settings via UI.
 
 ---
 
