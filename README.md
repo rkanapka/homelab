@@ -45,10 +45,22 @@ Used to manage CPU & GPU temperatures by controlling a 5V fan through GPIO.
 ### 🚀 How to Start the Project
 1. Ensure Docker and Docker Compose are installed.
 2. Ensure `.env` contains all necessary environment variables. Example provided in `.env.sample` file.
-    * PLEX_CLAIM – Plex claim token for server linking.
-    * SSD1_PATH – Path to the SSD for storing media and downloads.
-    * TRANSMISSION_USERNAME – Username for Transmission web interface.
-    * TRANSMISSION_PASSWORD – Password for Transmission web interface.
+```
+IP: RPI server’s IP address.
+PLEX_CLAIM: Plex account claim key for linking the server.
+SSD1_PATH: Path to your media storage (inside you have to have two dirs for movies & TV shows).
+TRANSMISSION_USERNAME: Username for the Transmission torrent client.
+TRANSMISSION_PASSWORD: Password for the Transmission torrent client.
+PLEX_URL: URL to access the Plex server.
+PROWLARR_URL: URL to access the Prowlarr server (torrent indexer).
+RADARR_URL: URL to access the Radarr server (movie manager).
+SONARR_URL: URL to access the Sonarr server (TV show manager).
+TRANSMISSION_URL: URL to access the Transmission client.
+PLEX_KEY: Authentication key for Plex server.
+PROWLARR_KEY: Authentication key for Prowlarr.
+RADARR_KEY: Authentication key for Radarr.
+SONARR_KEY: Authentication key for Sonarr.
+```
 3. Then, run the following command to launch all services (set `.env` file path accordingly):
 
 ```bash
