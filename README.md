@@ -35,7 +35,12 @@ Used to manage CPU & GPU temperatures by controlling a 5V fan through GPIO.
 - **Setup**:
   - The fan connects to an NPN 2N2222A transistor, enabling automatic on/off control via GPIO.
   - Example circuit diagram:  
-    ![Circuit Diagram](https://github.com/user-attachments/assets/dfefdb75-9d30-48e5-855b-3c200305644f)  
+    ![Circuit Diagram](https://github.com/user-attachments/assets/dfefdb75-9d30-48e5-855b-3c200305644f)
+- **Setup script to run automatically**
+  1. Change `/path/to/` in `fan_control.sh` to match path of `fan_control.py`
+  2. Put script in `/etc/init.d`
+  3. You can start automatic script with command `/etc/init.d/fan_control start`<br/>
+  NOTE: Check RPI temperature with command `vcgencmd measure_temp`
   
 - **Behavior**:
   - Fan activates at **65°C** and deactivates at **40°C** to maintain optimal temperature.
