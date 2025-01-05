@@ -57,7 +57,7 @@
     - Pi-hole:
         icon: pi-hole.png
         href: {{HOMEPAGE_VAR_PIHOLE_URL}}
-        description: Netowrk-wide ad blocker
+        description: Network-wide ad blocker
         widget:
           type: pihole
           url: {{HOMEPAGE_VAR_PIHOLE_IP}}
