@@ -5,13 +5,11 @@ sonarr/config/
 prowlarr/config/
 transmission/config/
 
-homepage/config/bookmarks.yaml
 homepage/config/custom.css
 homepage/config/custom.js
 homepage/config/docker.yaml
 homepage/config/kubernetes.yaml
 homepage/config/logs/
-homepage/config/widgets.yaml
 
 pihole/etc-pihole/
 pihole/etc-dnsmasq.d/

@@ -1,0 +1,31 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Developer:
+    - Github:
+        - abbr: GH
+          href: https://github.com/
+    - Stackoverflow:
+        - abbr: SO
+          href: https://stackoverflow.com/
+
+- Social:
+    - Reddit:
+        - abbr: RE
+          href: https://reddit.com/
+    - Linkedin:
+        - abbr: LI
+          href: https://linkedin.com/
+    - Facebook:
+        - abbr: FB
+          href: https://facebook.com/
+    - Instagram:
+        - abbr: IG
+          href: https://instagram.com/
+
+- Entertainment:
+    - YouTube:
+        - abbr: YT
+          href: https://youtube.com/
+
