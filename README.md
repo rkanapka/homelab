@@ -3,6 +3,11 @@
 Welcome to my personal homelab project!<br/>
 This repository contains the configuration files, automation scripts, and deployment instructions for managing my Raspberry Pi-based homelab environment.
 
+### Key Features:
+* Local-Only Services – All services are accessible only within the local network.
+* Secure Access – Services are secured with HTTPS using DuckDNS for dynamic DNS.
+* Temperature Control – The Raspberry Pi is equipped with an automatic fan controlled by a custom GPIO script to manage CPU/GPU temperatures.
+
 ---
 
 ### 📡 Hardware
@@ -25,7 +30,8 @@ A collection of essential services running in Docker containers, all orchestrate
 - **Sonarr** – TV series downloader and organizer.
 - **Radarr** – Automated movie downloader and manager.
 - **Transmission** – Lightweight torrent client for downloading files.
-
+- **Nginx Proxy Manager (NPM)** – Simple web interface for managing Nginx proxy hosts.
+- **Pi-hole** – Network-wide ad blocker and tracker blocker.
 ---
 
 ### 🔧 Scripts
@@ -48,6 +54,10 @@ Used to manage CPU & GPU temperatures by controlling a 5V fan through GPIO.
 ---
 
 ### 🚀 How to Start the Project
+
+The setup uses Docker Compose and environment variables to manage services.<br/>
+Plex and other apps require initial configuration via their UIs after deployment.
+
 1. Ensure Docker and Docker Compose are installed.
 2. Ensure `.env` contains all necessary environment variables. Example provided in `.env.sample` file.
 ```
