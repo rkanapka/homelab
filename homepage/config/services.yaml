@@ -9,7 +9,7 @@
         description: Watch movies and TV shows.
         widget:
           type: plex
-          url: {{HOMEPAGE_VAR_PLEX_URL}}
+          url: {{HOMEPAGE_VAR_PLEX_IP}}
           key: {{HOMEPAGE_VAR_PLEX_KEY}}
 
 - Torrent:
@@ -39,9 +39,9 @@
         description: Download movies 😎
         widget:
           type: radarr
-          url: {{HOMEPAGE_VAR_RADARR_URL}}
+          url: {{HOMEPAGE_VAR_RADARR_IP}}
           key: {{HOMEPAGE_VAR_RADARR_KEY}}
-          enableQueue: true # optional, defaults to false
+          enableQueue: false # optional, defaults to false
 
     - Sonarr:
         icon: sonarr.png
@@ -49,7 +49,28 @@
         description: Download tv shows 😎
         widget:
           type: sonarr
-          url: {{HOMEPAGE_VAR_SONARR_URL}}
+          url: {{HOMEPAGE_VAR_SONARR_IP}}
           key: {{HOMEPAGE_VAR_SONARR_KEY}}
-          enableQueue: true # optional, defaults to false
+          enableQueue: false # optional, defaults to false
+
+- Dev Tools:
+    - Pi-hole:
+        icon: pi-hole.png
+        href: {{HOMEPAGE_VAR_PIHOLE_URL}}
+        description: Netowrk-wide ad blocker
+        widget:
+          type: pihole
+          url: {{HOMEPAGE_VAR_PIHOLE_IP}}
+          key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+
+
+    - Npm:
+        icon: nginx-proxy-manager.png
+        href: {{HOMEPAGE_VAR_NPM_URL}}
+        description: Proxy, SSL & traffic manager
+        widget:
+          type: npm
+          url: {{HOMEPAGE_VAR_NPM_IP}}
+          username: {{HOMEPAGE_VAR_NPM_USERNAME}}
+          password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
 
