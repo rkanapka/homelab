@@ -13,3 +13,8 @@ homepage/config/kubernetes.yaml
 homepage/config/logs/
 homepage/config/widgets.yaml
 
+pihole/etc-pihole/
+pihole/etc-dnsmasq.d/
+nginx-proxy-manager/data/
+nginx-proxy-manager/letsencrypt
+
