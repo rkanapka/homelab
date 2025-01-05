@@ -95,7 +95,7 @@ SONARR_KEY: Authentication key for Sonarr.
 docker-compose --env-file ~/homelab/.env up -d
 ```
 
-4. You will have to additionally configure Plex, Prowlarr, Sonnar, Radarr & Transimission settings via UI.
+4. You will have to additionally configure all settings of services via UI.
 
 ---
 
