@@ -5,6 +5,7 @@ services:
     environment:
       PUID: 1000 # optional, your user id
       PGID: 1000 # optional, your group id
+      HOMEPAGE_VAR_SSD1_DRIVE: ${SSD1_DRIVE}
       HOMEPAGE_VAR_PLEX_IP: ${PLEX_IP}
       HOMEPAGE_VAR_PLEX_URL: ${PLEX_URL}
       HOMEPAGE_VAR_PROWLARR_IP: ${PROWLARR_IP}
@@ -35,5 +36,6 @@ services:
       - ./config:/app/config # Make sure your local config directory exists
       - ./config/images:/app/public/images
       - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
+      - ${SSD1_DRIVE}:/mnt/ssd1:ro
     restart: unless-stopped
 
