@@ -53,14 +53,27 @@ Used to manage CPU & GPU temperatures by controlling a 5V fan through GPIO.
 ```
 IP: RPI server’s IP address.
 PLEX_CLAIM: Plex account claim key for linking the server.
+SSD1_DRIVE: Additional drive path which is connected  to RPI.
 SSD1_PATH: Path to your media storage (inside you have to have two dirs for movies & TV shows).
 TRANSMISSION_USERNAME: Username for the Transmission torrent client.
 TRANSMISSION_PASSWORD: Password for the Transmission torrent client.
-PLEX_URL: URL to access the Plex server.
-PROWLARR_URL: URL to access the Prowlarr server (torrent indexer).
-RADARR_URL: URL to access the Radarr server (movie manager).
-SONARR_URL: URL to access the Sonarr server (TV show manager).
+PLEX_IP: Internal IP address of the Plex server.
+PLEX_URL: URL to access the Plex UI.
+PROWLARR_IP: Internal IP address of the Prowlarr server.
+PROWLARR_URL: URL to access the Prowlarr server (torrent indexer) UI.
+RADARR_IP: Internal IP address of the Radarr server.
+RADARR_URL: URL to access the Radarr server (movie manager) UI.
+SONARR_IP: Internal IP address of the Sonarr server.
+SONARR_URL: URL to access the Sonarr server (TV show manager) UI.
+TRANSMISSION_IP: Internal IP address of the Transmission client.
 TRANSMISSION_URL: URL to access the Transmission client.
+NPM_IP: Internal IP address of Nginx Proxy Manager.
+NPM_URL: URL to access Nginx Proxy Manager UI.
+NPM_USERNAME: Username to log in to Nginx Proxy Manager.
+NPM_PASSWORD: Password to log in to Nginx Proxy Manager.
+PIHOLE_IP: Internal IP address of the Pi-hole server (ad blocker/DNS).
+PIHOLE_URL: URL to access the Pi-hole UI.
+PIHOLE_KEY: API key for the Pi-hole server to manage DNS and ad-blocking settings.
 PLEX_KEY: Authentication key for Plex server.
 PROWLARR_KEY: Authentication key for Prowlarr.
 RADARR_KEY: Authentication key for Radarr.
@@ -73,6 +86,12 @@ docker-compose --env-file ~/homelab/.env up -d
 ```
 
 4. You will have to additionally configure Plex, Prowlarr, Sonnar, Radarr & Transimission settings via UI.
+
+---
+
+### Screenshots
+
+![homepage](https://github.com/user-attachments/assets/6a5b1b59-a72f-49dc-9be2-526b64f997e8)
 
 ---
 
