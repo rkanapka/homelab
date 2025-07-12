@@ -60,8 +60,11 @@ Plex and other apps require initial configuration via their UIs after deployment
 
 1. Ensure Docker and Docker Compose are installed.
 2. Ensure `.env` contains all necessary environment variables. Example provided in `.env.sample` file.
+https://gethomepage.dev/installation/#homepage_allowed_hosts
+
 ```
 IP: RPI server’s IP address.
+HOMEPAGE_HOST: List of hosts for Homepage.
 PLEX_CLAIM: Plex account claim key for linking the server.
 SSD1_DRIVE: Additional drive path which is connected  to RPI.
 SSD1_PATH: Path to your media storage (inside you have to have two dirs for movies & TV shows).
