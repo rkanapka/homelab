@@ -85,7 +85,7 @@ NPM_USERNAME: Username to log in to Nginx Proxy Manager.
 NPM_PASSWORD: Password to log in to Nginx Proxy Manager.
 PIHOLE_IP: Internal IP address of the Pi-hole server (ad blocker/DNS).
 PIHOLE_URL: URL to access the Pi-hole UI.
-PIHOLE_KEY: API key for the Pi-hole server to manage DNS and ad-blocking settings.
+PIHOLE_PASSWORD: Works with Pi-hole v6. Can be your password or app password.
 PLEX_KEY: Authentication key for Plex server.
 PROWLARR_KEY: Authentication key for Prowlarr.
 RADARR_KEY: Authentication key for Radarr.
