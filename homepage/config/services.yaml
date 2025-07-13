@@ -60,8 +60,9 @@
         description: Network-wide ad blocker
         widget:
           type: pihole
+          version: 6 # required if running v6 or higher, defaults to 5
           url: {{HOMEPAGE_VAR_PIHOLE_IP}}
-          key: {{HOMEPAGE_VAR_PIHOLE_KEY}}
+          key: {{HOMEPAGE_VAR_PIHOLE_PASSWORD}} # optional, in v6 can be your password or app password
 
 
     - Npm:
