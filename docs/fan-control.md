@@ -21,13 +21,40 @@ vcgencmd measure_temp
 
 ## Setup (run on boot)
 
-1. Edit `fan_control.sh` — replace `/path/to/` with the actual path to `fan_control.py`
+1. Edit `fan_control.sh` — replace `/path/to/homelab/` with the actual path to your homelab directory (e.g. `/home/youruser/homelab/`)
 2. Copy the script to `/etc/init.d`:
    ```bash
    sudo cp fan_control.sh /etc/init.d/fan_control
    sudo chmod +x /etc/init.d/fan_control
    ```
-3. Start the service:
+3. Enable it to run automatically on every boot:
+   ```bash
+   sudo update-rc.d fan_control defaults
+   ```
+4. Start it now (without rebooting):
    ```bash
    sudo /etc/init.d/fan_control start
    ```
+
+To disable autostart:
+```bash
+sudo update-rc.d fan_control remove
+```
+
+## Verify
+
+Check if autostart is registered (look for symlinks in runlevel directories):
+```bash
+ls /etc/rc*.d/ | grep fan_control
+```
+
+Expected output when enabled:
+```
+K01fan_control   ← runlevels 0, 1, 6 (halt/reboot — K = Kill)
+S01fan_control   ← runlevels 2, 3, 4, 5 (normal boot — S = Start)
+```
+
+Check if the script is currently running:
+```bash
+ps aux | grep fan_control
+```
