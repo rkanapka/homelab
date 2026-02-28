@@ -16,6 +16,7 @@
         widget:
           type: immich
           url: {{HOMEPAGE_VAR_IMMICH_IP}}
+          key: {{HOMEPAGE_VAR_IMMICH_API_KEY}}
 
 # DISABLED - Plex stack (migrated to Stremio + RealDebrid)
 # To re-enable: uncomment these sections and the corresponding lines in docker-compose.yml
