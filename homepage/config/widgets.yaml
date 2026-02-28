@@ -13,9 +13,8 @@
     label: Storage
     expanded: true
     disk:
-      - path: /
-        label: SD Card
-      - path: /mnt/ssd1
+      - /
+      - /mnt/ssd1
         label: SSD
 
 - resources:
