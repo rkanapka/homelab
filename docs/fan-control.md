@@ -7,6 +7,7 @@ The `fan_control.py` script manages CPU & GPU temperatures by controlling a 5V f
 The fan connects to an NPN 2N2222A transistor, enabling automatic on/off control via GPIO.
 
 Example circuit diagram:
+
 ![Circuit Diagram](https://github.com/user-attachments/assets/dfefdb75-9d30-48e5-855b-3c200305644f)
 
 ## Behavior
