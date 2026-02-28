@@ -15,6 +15,14 @@
         - abbr: PY
           href: https://docs.python.org/
           icon: python.png
+    - DuckDNS:
+        - abbr: DD
+          href: https://www.duckdns.org/
+          icon: duckdns.png
+    - Real-Debrid:
+        - abbr: RD
+          href: https://real-debrid.com/
+          icon: real-debrid.png
 
 - AI:
     - Claude:
