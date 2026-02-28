@@ -7,5 +7,5 @@ include:
   # - transmission/docker-compose.yml  # disabled - using Stremio + RealDebrid
   - nginx-proxy-manager/docker-compose.yml
   - pihole/docker-compose.yml
-  - immich/docker-compose.yml
+  # - immich/docker-compose.yml            # disabled - hardware requirements not met (min 6GB RAM)
 
