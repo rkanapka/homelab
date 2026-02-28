@@ -2,7 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services
 
-- Streaming:
+- Watch:
     - Stremio:
         icon: stremio.png
         href: https://web.stremio.com/
