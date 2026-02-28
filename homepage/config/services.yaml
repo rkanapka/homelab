@@ -79,6 +79,17 @@
 #           enableQueue: false
 
 - Dev Tools:
+    - Uptime Kuma:
+        icon: uptime-kuma.png
+        href: {{HOMEPAGE_VAR_KUMA_URL}}
+        description: Service uptime monitor
+        server: my-docker
+        container: uptime-kuma
+        widget:
+          type: uptimekuma
+          url: {{HOMEPAGE_VAR_KUMA_IP}}
+          slug: {{HOMEPAGE_VAR_KUMA_SLUG}} # create a status page in Kuma UI with this slug first
+
     - Vaultwarden:
         icon: vaultwarden.png
         href: {{HOMEPAGE_VAR_VAULTWARDEN_URL}}

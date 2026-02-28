@@ -8,5 +8,6 @@ include:
   - nginx-proxy-manager/docker-compose.yml
   - pihole/docker-compose.yml
   - vaultwarden/docker-compose.yml
+  - uptime-kuma/docker-compose.yml
   # - immich/docker-compose.yml            # disabled - hardware requirements not met (min 6GB RAM)
 

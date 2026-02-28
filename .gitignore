@@ -11,6 +11,7 @@ homepage/config/kubernetes.yaml
 homepage/config/logs/
 
 vaultwarden/vw-data/
+uptime-kuma/data/
 pihole/etc-pihole/
 pihole/etc-dnsmasq.d/
 nginx-proxy-manager/data/

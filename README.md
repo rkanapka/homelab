@@ -31,6 +31,7 @@ A collection of essential services running in Docker containers, all orchestrate
 - **Nginx Proxy Manager (NPM)** - Simple web interface for managing Nginx proxy hosts.
 - **Pi-hole** - Network-wide ad blocker and tracker blocker.
 - **Vaultwarden** - Self-hosted Bitwarden-compatible password manager.
+- **Uptime Kuma** - Service uptime monitor with alerting.
 
 #### ⚠️ Disabled Services
 
@@ -71,6 +72,9 @@ HOMEPAGE_HOST:    Allowed hostname(s) for the Homepage dashboard.
 SSD1_DRIVE:       Mount path of the external SSD connected to the RPi.
 VAULTWARDEN_IP:   Internal IP address of the Vaultwarden server.
 VAULTWARDEN_URL:  Public URL for Vaultwarden (used as the DOMAIN for HTTPS cookies).
+KUMA_IP:          Internal IP address of the Uptime Kuma server.
+KUMA_URL:         URL to access the Uptime Kuma UI.
+KUMA_SLUG:        Slug of the status page created in Kuma UI (used for Homepage widget).
 NPM_IP:           Internal IP address of Nginx Proxy Manager.
 NPM_URL:          URL to access the Nginx Proxy Manager UI.
 NPM_USERNAME:     Username to log in to Nginx Proxy Manager.
