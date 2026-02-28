@@ -31,7 +31,7 @@ A collection of essential services running in Docker containers, all orchestrate
 
 #### ⚠️ Disabled Services (Plex Stack)
 These services are configured but not running. Migrated to Stremio + RealDebrid.
-To re-enable, uncomment the relevant lines in `docker-compose.yml` and `homepage/config/services.yaml`.
+To re-enable, uncomment the relevant lines in `docker-compose.yml`, `homepage/docker-compose.yml`, and `homepage/config/services.yaml`.
 
 - **Plex** – Media server to stream movies, TV shows, and music.
 - **Prowlarr** – Torrent indexer manager.
