@@ -32,6 +32,7 @@ A collection of essential services running in Docker containers, all orchestrate
 - **Pi-hole** - Network-wide ad blocker and tracker blocker.
 - **Vaultwarden** - Self-hosted Bitwarden-compatible password manager.
 - **Uptime Kuma** - Service uptime monitor with alerting.
+- **WG-Easy** - WireGuard VPN with web UI for remote access.
 
 #### ⚠️ Disabled Services
 
@@ -70,6 +71,10 @@ Some services require initial configuration via their UIs after first deployment
 IP:               RPi server’s static IP address.
 HOMEPAGE_HOST:    Allowed hostname(s) for the Homepage dashboard.
 SSD1_DRIVE:       Mount path of the external SSD connected to the RPi.
+WG_HOST:          Public hostname for WireGuard (your DuckDNS domain, e.g. yourdomain.duckdns.org).
+WG_PASSWORD:      Password for the WG-Easy web UI.
+WGEASY_IP:        Internal IP address of the WG-Easy web UI.
+WGEASY_URL:       URL to access the WG-Easy web UI.
 VAULTWARDEN_IP:   Internal IP address of the Vaultwarden server.
 VAULTWARDEN_URL:  Public URL for Vaultwarden (used as the DOMAIN for HTTPS cookies).
 KUMA_IP:          Internal IP address of the Uptime Kuma server.

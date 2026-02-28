@@ -90,6 +90,13 @@
           url: {{HOMEPAGE_VAR_KUMA_IP}}
           slug: {{HOMEPAGE_VAR_KUMA_SLUG}} # create a status page in Kuma UI with this slug first
 
+    - WG-Easy:
+        icon: wireguard.png
+        href: {{HOMEPAGE_VAR_WGEASY_URL}}
+        description: WireGuard VPN
+        server: my-docker
+        container: wg-easy
+
     - Vaultwarden:
         icon: vaultwarden.png
         href: {{HOMEPAGE_VAR_VAULTWARDEN_URL}}

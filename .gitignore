@@ -10,6 +10,7 @@ homepage/config/custom.js
 homepage/config/kubernetes.yaml
 homepage/config/logs/
 
+wg-easy/data/
 vaultwarden/vw-data/
 uptime-kuma/data/
 pihole/etc-pihole/
