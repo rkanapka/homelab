@@ -6,23 +6,28 @@
     - Github:
         - abbr: GH
           href: https://github.com/
+          icon: github.png
 
 - Social:
     - Reddit:
         - abbr: RE
           href: https://reddit.com/
+          icon: reddit.png
     - Linkedin:
         - abbr: LI
           href: https://linkedin.com/
+          icon: linkedin.png
     - Facebook:
         - abbr: FB
           href: https://facebook.com/
+          icon: facebook.png
     - Instagram:
         - abbr: IG
           href: https://instagram.com/
+          icon: instagram.png
 
 - Entertainment:
     - YouTube:
         - abbr: YT
           href: https://youtube.com/
-
+          icon: youtube.png
