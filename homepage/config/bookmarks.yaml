@@ -7,6 +7,14 @@
         - abbr: GH
           href: https://github.com/
           icon: github.png
+    - AWS:
+        - abbr: AW
+          href: https://console.aws.amazon.com/
+          icon: aws.png
+    - Python:
+        - abbr: PY
+          href: https://docs.python.org/
+          icon: python.png
 
 - AI:
     - Claude:
