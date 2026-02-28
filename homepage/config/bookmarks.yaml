@@ -8,6 +8,20 @@
           href: https://github.com/
           icon: github.png
 
+- AI:
+    - Claude:
+        - abbr: CL
+          href: https://claude.ai/
+          icon: claude-ai.png
+    - ChatGPT:
+        - abbr: GP
+          href: https://chatgpt.com/
+          icon: chatgpt.png
+    - Gemini:
+        - abbr: GM
+          href: https://gemini.google.com/
+          icon: google-gemini.png
+
 - Social:
     - Reddit:
         - abbr: RE
