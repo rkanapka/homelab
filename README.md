@@ -127,7 +127,10 @@ docker compose --env-file ~/homelab/.env up -d
 ### Screenshots
 
 ### Homepage dashboard
+Old version:
 ![homepage](https://github.com/user-attachments/assets/6a5b1b59-a72f-49dc-9be2-526b64f997e8)
+Latesst verion:
+<img width="2344" height="1303" alt="image" src="https://github.com/user-attachments/assets/ba76effe-94b4-4ce9-897c-a6d91c57bee8" />
 
 ### Ads Before and After running Pi-hole
 
