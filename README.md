@@ -122,8 +122,13 @@ docker compose --env-file ~/homelab/.env up -d
 ```
 
 4. You will have to additionally configure all settings of services via UI.
-   
-5. Configure Pi-hole and Router
+
+5. Configure Uptime Kuma status page (required for Homepage widget)
+
+   Open Kuma UI → **Status Page → New** → set slug to `homelab` → add your monitors.
+   The Homepage widget will only display data once this status page exists. Add services to it after creation.
+
+6. Configure Pi-hole and Router
 
    Set a static IP for the RPi, then point your router’s DNS to Pi-hole’s IP.
 
