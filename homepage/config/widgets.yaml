@@ -10,7 +10,7 @@
     uptime: true
 
 - resources:
-    label: Storage
+    label: "Storage · 32GB SD Card + 500GB SSD"
     expanded: true
     disk:
       - /
