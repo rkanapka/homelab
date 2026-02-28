@@ -15,7 +15,6 @@
     disk:
       - /
       - /mnt/ssd1
-        label: SSD
 
 - resources:
     label: Network
