@@ -7,4 +7,5 @@ include:
   - transmission/docker-compose.yml
   - nginx-proxy-manager/docker-compose.yml
   - pihole/docker-compose.yml
+  - immich/docker-compose.yml
 
