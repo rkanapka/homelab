@@ -25,13 +25,19 @@ This repository contains the configuration files, automation scripts, and deploy
 A collection of essential services running in Docker containers, all orchestrated via `docker-compose`.
 
 - **Homepage** – Central dashboard for accessing all homelab services.
+- **Immich** - Self-hosted photo and video backup (Google Photos alternative).
+- **Nginx Proxy Manager (NPM)** - Simple web interface for managing Nginx proxy hosts.
+- **Pi-hole** - Network-wide ad blocker and tracker blocker.
+
+#### ⚠️ Disabled Services (Plex Stack)
+These services are configured but not running. Migrated to Stremio + RealDebrid.
+To re-enable, uncomment the relevant lines in `docker-compose.yml` and `homepage/config/services.yaml`.
+
 - **Plex** – Media server to stream movies, TV shows, and music.
 - **Prowlarr** – Torrent indexer manager.
 - **Sonarr** – TV series downloader and organizer.
 - **Radarr** – Automated movie downloader and manager.
 - **Transmission** – Lightweight torrent client for downloading files.
-- **Nginx Proxy Manager (NPM)** – Simple web interface for managing Nginx proxy hosts.
-- **Pi-hole** – Network-wide ad blocker and tracker blocker.
 ---
 
 ### 🔧 Scripts

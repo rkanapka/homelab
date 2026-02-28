@@ -11,56 +11,59 @@
           type: immich
           url: {{HOMEPAGE_VAR_IMMICH_IP}}
 
-- Media Server:
-    - Plex:
-        icon: plex.png
-        href: {{HOMEPAGE_VAR_PLEX_URL}}
-        description: Watch movies and TV shows.
-        widget:
-          type: plex
-          url: {{HOMEPAGE_VAR_PLEX_IP}}
-          key: {{HOMEPAGE_VAR_PLEX_KEY}}
-
-- Torrent:
-    - Transmission:
-        icon: transmission.png
-        href: {{HOMEPAGE_VAR_TRANSMISSION_URL}}
-        server: {{HOMEPAGE_VAR_SERVER_IP}}
-        widget:
-          type: transmission
-          url: {{HOMEPAGE_VAR_TRANSMISSION_URL}}
-          username: {{HOMEPAGE_VAR_TRANSMISSION_USERNAME}}
-          password: {{HOMEPAGE_VAR_TRANSMISSION_PASSWORD}}
-
-- Find Cinemagic:
-    - Prowlarr:
-        icon: prowlarr.png
-        href: {{HOMEPAGE_VAR_PROWLARR_URL}}
-        description: Indexes 😎
-        widget:
-          type: prowlarr
-          url: {{HOMEPAGE_VAR_PROWLARR_URL}}
-          key: {{HOMEPAGE_VAR_PROWLARR_KEY}}
-
-    - Radarr:
-        icon: radarr.png
-        href: {{HOMEPAGE_VAR_RADARR_URL}}
-        description: Download movies 😎
-        widget:
-          type: radarr
-          url: {{HOMEPAGE_VAR_RADARR_IP}}
-          key: {{HOMEPAGE_VAR_RADARR_KEY}}
-          enableQueue: false # optional, defaults to false
-
-    - Sonarr:
-        icon: sonarr.png
-        href: {{HOMEPAGE_VAR_SONARR_URL}}
-        description: Download tv shows 😎
-        widget:
-          type: sonarr
-          url: {{HOMEPAGE_VAR_SONARR_IP}}
-          key: {{HOMEPAGE_VAR_SONARR_KEY}}
-          enableQueue: false # optional, defaults to false
+# DISABLED - Plex stack (migrated to Stremio + RealDebrid)
+# To re-enable: uncomment these sections and the corresponding lines in docker-compose.yml
+#
+# - Media Server:
+#     - Plex:
+#         icon: plex.png
+#         href: {{HOMEPAGE_VAR_PLEX_URL}}
+#         description: Watch movies and TV shows.
+#         widget:
+#           type: plex
+#           url: {{HOMEPAGE_VAR_PLEX_IP}}
+#           key: {{HOMEPAGE_VAR_PLEX_KEY}}
+#
+# - Torrent:
+#     - Transmission:
+#         icon: transmission.png
+#         href: {{HOMEPAGE_VAR_TRANSMISSION_URL}}
+#         server: {{HOMEPAGE_VAR_SERVER_IP}}
+#         widget:
+#           type: transmission
+#           url: {{HOMEPAGE_VAR_TRANSMISSION_URL}}
+#           username: {{HOMEPAGE_VAR_TRANSMISSION_USERNAME}}
+#           password: {{HOMEPAGE_VAR_TRANSMISSION_PASSWORD}}
+#
+# - Find Cinemagic:
+#     - Prowlarr:
+#         icon: prowlarr.png
+#         href: {{HOMEPAGE_VAR_PROWLARR_URL}}
+#         description: Indexes 😎
+#         widget:
+#           type: prowlarr
+#           url: {{HOMEPAGE_VAR_PROWLARR_URL}}
+#           key: {{HOMEPAGE_VAR_PROWLARR_KEY}}
+#
+#     - Radarr:
+#         icon: radarr.png
+#         href: {{HOMEPAGE_VAR_RADARR_URL}}
+#         description: Download movies 😎
+#         widget:
+#           type: radarr
+#           url: {{HOMEPAGE_VAR_RADARR_IP}}
+#           key: {{HOMEPAGE_VAR_RADARR_KEY}}
+#           enableQueue: false
+#
+#     - Sonarr:
+#         icon: sonarr.png
+#         href: {{HOMEPAGE_VAR_SONARR_URL}}
+#         description: Download tv shows 😎
+#         widget:
+#           type: sonarr
+#           url: {{HOMEPAGE_VAR_SONARR_IP}}
+#           key: {{HOMEPAGE_VAR_SONARR_KEY}}
+#           enableQueue: false
 
 - Dev Tools:
     - Pi-hole:

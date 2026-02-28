@@ -1,10 +1,10 @@
 include:
   - homepage/docker-compose.yml
-  - plex/docker-compose.yml
-  - prowlarr/docker-compose.yml
-  - radarr/docker-compose.yml
-  - sonarr/docker-compose.yml
-  - transmission/docker-compose.yml
+  # - plex/docker-compose.yml          # disabled - using Stremio + RealDebrid
+  # - prowlarr/docker-compose.yml      # disabled - using Stremio + RealDebrid
+  # - radarr/docker-compose.yml        # disabled - using Stremio + RealDebrid
+  # - sonarr/docker-compose.yml        # disabled - using Stremio + RealDebrid
+  # - transmission/docker-compose.yml  # disabled - using Stremio + RealDebrid
   - nginx-proxy-manager/docker-compose.yml
   - pihole/docker-compose.yml
   - immich/docker-compose.yml
