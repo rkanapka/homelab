@@ -12,7 +12,7 @@ This repository contains the configuration files, automation scripts, and deploy
 
 ### 📡 Hardware
 - **Device**: Raspberry Pi 4 Model B  
-- **RAM**: 8GB
+- **RAM**: 2GB
 
 ---
 
@@ -25,12 +25,16 @@ This repository contains the configuration files, automation scripts, and deploy
 A collection of essential services running in Docker containers, all orchestrated via `docker-compose`.
 
 - **Homepage** – Central dashboard for accessing all homelab services.
-- **Immich** - Self-hosted photo and video backup (Google Photos alternative).
 - **Nginx Proxy Manager (NPM)** - Simple web interface for managing Nginx proxy hosts.
 - **Pi-hole** - Network-wide ad blocker and tracker blocker.
 
-#### ⚠️ Disabled Services (Plex Stack)
-These services are configured but not running. Migrated to Stremio + RealDebrid.
+#### ⚠️ Disabled Services
+
+**Immich** (photo & video backup — Google Photos alternative)
+Disabled: hardware requirements not met. Immich requires a minimum of 6GB RAM (recommended 8GB). The RPi 4 (2GB) is below the minimum.
+To re-enable: upgrade to hardware with 6GB+ RAM, then uncomment the relevant lines in `homepage/docker-compose.yml` and `homepage/config/services.yaml`.
+
+**Plex Stack** — migrated to Stremio + RealDebrid.
 To re-enable, uncomment the relevant lines in `docker-compose.yml`, `homepage/docker-compose.yml`, and `homepage/config/services.yaml`.
 
 - **Plex** – Media server to stream movies, TV shows, and music.

@@ -8,17 +8,21 @@
         href: https://web.stremio.com/
         description: Movies, TV shows & anime
 
-- Photos:
-    - Immich:
-        icon: immich.png
-        href: {{HOMEPAGE_VAR_IMMICH_URL}}
-        description: Photo & video management
-        server: my-docker
-        container: immich_server
-        widget:
-          type: immich
-          url: {{HOMEPAGE_VAR_IMMICH_IP}}
-          key: {{HOMEPAGE_VAR_IMMICH_API_KEY}}
+# DISABLED - Immich (hardware requirements not met: min 6GB RAM, RPi 4 has 2GB)
+# To re-enable: upgrade to hardware with 6GB+ RAM, then uncomment below and the corresponding lines in
+# homepage/docker-compose.yml
+#
+# - Photos:
+#     - Immich:
+#         icon: immich.png
+#         href: {{HOMEPAGE_VAR_IMMICH_URL}}
+#         description: Photo & video management
+#         server: my-docker
+#         container: immich_server
+#         widget:
+#           type: immich
+#           url: {{HOMEPAGE_VAR_IMMICH_IP}}
+#           key: {{HOMEPAGE_VAR_IMMICH_API_KEY}}
 
 # DISABLED - Plex stack (migrated to Stremio + RealDebrid)
 # To re-enable: uncomment these sections and the corresponding lines in docker-compose.yml
