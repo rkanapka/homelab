@@ -6,7 +6,7 @@
     - Immich:
         icon: immich.png
         href: {{HOMEPAGE_VAR_IMMICH_URL}}
-        description: Self-hosted photo & video backup
+        description: Photo & video management
         widget:
           type: immich
           url: {{HOMEPAGE_VAR_IMMICH_IP}}
