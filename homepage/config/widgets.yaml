@@ -18,6 +18,10 @@
       - path: /mnt/ssd1
         label: SSD
 
+- resources:
+    label: Network
+    network: eth0
+
 - search:
     provider: google
     target: _blank
