@@ -10,6 +10,7 @@ homepage/config/custom.js
 homepage/config/kubernetes.yaml
 homepage/config/logs/
 
+vaultwarden/vw-data/
 pihole/etc-pihole/
 pihole/etc-dnsmasq.d/
 nginx-proxy-manager/data/

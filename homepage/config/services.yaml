@@ -79,6 +79,13 @@
 #           enableQueue: false
 
 - Dev Tools:
+    - Vaultwarden:
+        icon: vaultwarden.png
+        href: {{HOMEPAGE_VAR_VAULTWARDEN_URL}}
+        description: Password manager
+        server: my-docker
+        container: vaultwarden
+
     - Pi-hole:
         icon: pi-hole.png
         href: {{HOMEPAGE_VAR_PIHOLE_URL}}

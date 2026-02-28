@@ -30,6 +30,7 @@ A collection of essential services running in Docker containers, all orchestrate
 - **Homepage** – Central dashboard for accessing all homelab services.
 - **Nginx Proxy Manager (NPM)** - Simple web interface for managing Nginx proxy hosts.
 - **Pi-hole** - Network-wide ad blocker and tracker blocker.
+- **Vaultwarden** - Self-hosted Bitwarden-compatible password manager.
 
 #### ⚠️ Disabled Services
 
@@ -68,6 +69,8 @@ Some services require initial configuration via their UIs after first deployment
 IP:               RPi server’s static IP address.
 HOMEPAGE_HOST:    Allowed hostname(s) for the Homepage dashboard.
 SSD1_DRIVE:       Mount path of the external SSD connected to the RPi.
+VAULTWARDEN_IP:   Internal IP address of the Vaultwarden server.
+VAULTWARDEN_URL:  Public URL for Vaultwarden (used as the DOMAIN for HTTPS cookies).
 NPM_IP:           Internal IP address of Nginx Proxy Manager.
 NPM_URL:          URL to access the Nginx Proxy Manager UI.
 NPM_USERNAME:     Username to log in to Nginx Proxy Manager.
