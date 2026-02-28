@@ -3,7 +3,7 @@
 # https://gethomepage.dev/configs/service-widgets
 
 - resources:
-    label: System
+    label: "RPi 4 Model B · BCM2711 Quad-core A72 @ 1.8GHz · 2GB RAM"
     cpu: true
     cputemp: true
     memory: true
