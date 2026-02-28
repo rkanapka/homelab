@@ -22,7 +22,11 @@
           href: https://gemini.google.com/
           icon: google-gemini.png
 
-- Social:
+- Media:
+    - YouTube:
+        - abbr: YT
+          href: https://youtube.com/
+          icon: youtube.png
     - Reddit:
         - abbr: RE
           href: https://reddit.com/
@@ -39,9 +43,3 @@
         - abbr: IG
           href: https://instagram.com/
           icon: instagram.png
-
-- Entertainment:
-    - YouTube:
-        - abbr: YT
-          href: https://youtube.com/
-          icon: youtube.png
