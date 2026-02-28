@@ -11,8 +11,11 @@ This repository contains the configuration files, automation scripts, and deploy
 ---
 
 ### 📡 Hardware
-- **Device**: Raspberry Pi 4 Model B  
-- **RAM**: 2GB
+- **Device**: Raspberry Pi 4 Model B (Rev 1.4)
+- **SoC**: Broadcom BCM2711
+- **CPU**: Quad-core ARM Cortex-A72 @ 1.8GHz (ARMv8, 64-bit)
+- **RAM**: 2GB LPDDR4
+- **Storage**: 32GB microSD (OS) + 512GB external SSD (data)
 
 ---
 
