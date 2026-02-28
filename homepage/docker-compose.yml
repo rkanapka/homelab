@@ -3,7 +3,7 @@ services:
     image: ghcr.io/gethomepage/homepage:latest
     container_name: homepage
     environment:
-      HOMEPAGE_ALLOWED_HOSTS: ${HOMEPAGE_HOST} 
+      HOMEPAGE_ALLOWED_HOSTS: ${HOMEPAGE_HOST}
       PUID: 1000 # optional, your user id
       PGID: 1000 # optional, your group id
       HOMEPAGE_VAR_SSD1_DRIVE: ${SSD1_DRIVE}
@@ -25,7 +25,7 @@ services:
       HOMEPAGE_VAR_PIHOLE_URL: ${PIHOLE_URL}
       HOMEPAGE_VAR_PIHOLE_PASSWORD: ${PIHOLE_PASSWORD}
       HOMEPAGE_VAR_TRANSMISSION_USERNAME: ${TRANSMISSION_USERNAME}
-      HOMEPAGE_VAR_TRANSMISSION_PASSWORD: ${TRANSMISSION_PASSWORD}     
+      HOMEPAGE_VAR_TRANSMISSION_PASSWORD: ${TRANSMISSION_PASSWORD}
       HOMEPAGE_VAR_SERVER_IP: ${IP}
       HOMEPAGE_VAR_PLEX_KEY: ${PLEX_KEY}
       HOMEPAGE_VAR_PROWLARR_KEY: ${PROWLARR_KEY}
@@ -39,7 +39,15 @@ services:
     volumes:
       - ./config:/app/config # Make sure your local config directory exists
       - ./config/images:/app/public/images
-      - /var/run/docker.sock:/var/run/docker.sock:ro # optional, for docker integrations
       - ${SSD1_DRIVE}:/mnt/ssd1:ro
     restart: unless-stopped
 
+  dockerproxy:
+    image: ghcr.io/tecnativa/docker-socket-proxy:latest
+    container_name: dockerproxy
+    environment:
+      - CONTAINERS=1 # allow reading container info
+      - POST=0       # disable write operations (read-only)
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: unless-stopped

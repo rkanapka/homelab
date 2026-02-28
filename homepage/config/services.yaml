@@ -13,6 +13,8 @@
         icon: immich.png
         href: {{HOMEPAGE_VAR_IMMICH_URL}}
         description: Photo & video management
+        server: my-docker
+        container: immich_server
         widget:
           type: immich
           url: {{HOMEPAGE_VAR_IMMICH_IP}}
@@ -77,6 +79,8 @@
         icon: pi-hole.png
         href: {{HOMEPAGE_VAR_PIHOLE_URL}}
         description: Network-wide ad blocker
+        server: my-docker
+        container: pihole
         widget:
           type: pihole
           version: 6 # required if running v6 or higher, defaults to 5
@@ -88,6 +92,8 @@
         icon: nginx-proxy-manager.png
         href: {{HOMEPAGE_VAR_NPM_URL}}
         description: Proxy, SSL & traffic manager
+        server: my-docker
+        container: nginx-proxy-manager
         widget:
           type: npm
           url: {{HOMEPAGE_VAR_NPM_IP}}
