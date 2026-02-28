@@ -72,7 +72,8 @@ IP:               RPi server’s static IP address.
 HOMEPAGE_HOST:    Allowed hostname(s) for the Homepage dashboard.
 SSD1_DRIVE:       Mount path of the external SSD connected to the RPi.
 WG_HOST:          Public hostname for WireGuard (your DuckDNS domain, e.g. yourdomain.duckdns.org).
-WG_PASSWORD:      Password for the WG-Easy web UI.
+WG_PASSWORD_HASH: Bcrypt hash of the WG-Easy web UI password. Generate with:
+                  docker run --rm ghcr.io/wg-easy/wg-easy wgpw YOUR_PASSWORD
 WGEASY_IP:        Internal IP address of the WG-Easy web UI.
 WGEASY_URL:       URL to access the WG-Easy web UI.
 VAULTWARDEN_IP:   Internal IP address of the Vaultwarden server.

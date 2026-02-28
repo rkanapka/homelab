@@ -5,7 +5,7 @@ services:
     environment:
       - LANG=en
       - WG_HOST=${WG_HOST}
-      - PASSWORD=${WG_PASSWORD}
+      - PASSWORD_HASH=${WG_PASSWORD_HASH}
       - WG_DEFAULT_ADDRESS=10.8.0.x
       - WG_DEFAULT_DNS=${IP}    # routes VPN client DNS through Pi-hole
       - WG_MTU=1420
