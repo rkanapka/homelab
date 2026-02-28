@@ -22,7 +22,7 @@ This repository contains the configuration files, automation scripts, and deploy
 ---
 
 ### 🧰 Applications
-A collection of essential services running in Docker containers, all orchestrated via `docker-compose`.
+A collection of essential services running in Docker containers, all orchestrated via `docker compose`.
 
 - **Homepage** – Central dashboard for accessing all homelab services.
 - **Nginx Proxy Manager (NPM)** - Simple web interface for managing Nginx proxy hosts.
@@ -32,7 +32,7 @@ A collection of essential services running in Docker containers, all orchestrate
 
 **Immich** (photo & video backup — Google Photos alternative)
 Disabled: hardware requirements not met. Immich requires a minimum of 6GB RAM (recommended 8GB). The RPi 4 (2GB) is below the minimum.
-To re-enable: upgrade to hardware with 6GB+ RAM, then uncomment the relevant lines in `homepage/docker-compose.yml` and `homepage/config/services.yaml`.
+To re-enable: upgrade to hardware with 6GB+ RAM, then uncomment the relevant lines in `docker-compose.yml`, `homepage/docker-compose.yml`, and `homepage/config/services.yaml`.
 
 **Plex Stack** — migrated to Stremio + RealDebrid.
 To re-enable, uncomment the relevant lines in `docker-compose.yml`, `homepage/docker-compose.yml`, and `homepage/config/services.yaml`.
@@ -66,45 +66,60 @@ Used to manage CPU & GPU temperatures by controlling a 5V fan through GPIO.
 ### 🚀 How to Start the Project
 
 The setup uses Docker Compose and environment variables to manage services.<br/>
-Plex and other apps require initial configuration via their UIs after deployment.
+Some services require initial configuration via their UIs after first deployment.
 
 1. Ensure Docker and Docker Compose are installed.
 2. Ensure `.env` contains all necessary environment variables. Example provided in `.env.sample` file.
 
+**Active services:**
 ```
-IP: RPI server’s IP address.
-HOMEPAGE_HOST: List of hosts for Homepage.
-PLEX_CLAIM: Plex account claim key for linking the server.
-SSD1_DRIVE: Additional drive path which is connected  to RPI.
-SSD1_PATH: Path to your media storage (inside you have to have two dirs for movies & TV shows).
-TRANSMISSION_USERNAME: Username for the Transmission torrent client.
-TRANSMISSION_PASSWORD: Password for the Transmission torrent client.
-PLEX_IP: Internal IP address of the Plex server.
-PLEX_URL: URL to access the Plex UI.
-PROWLARR_IP: Internal IP address of the Prowlarr server.
-PROWLARR_URL: URL to access the Prowlarr server (torrent indexer) UI.
-RADARR_IP: Internal IP address of the Radarr server.
-RADARR_URL: URL to access the Radarr server (movie manager) UI.
-SONARR_IP: Internal IP address of the Sonarr server.
-SONARR_URL: URL to access the Sonarr server (TV show manager) UI.
-TRANSMISSION_IP: Internal IP address of the Transmission client.
-TRANSMISSION_URL: URL to access the Transmission client.
-NPM_IP: Internal IP address of Nginx Proxy Manager.
-NPM_URL: URL to access Nginx Proxy Manager UI.
-NPM_USERNAME: Username to log in to Nginx Proxy Manager.
-NPM_PASSWORD: Password to log in to Nginx Proxy Manager.
-PIHOLE_IP: Internal IP address of the Pi-hole server (ad blocker/DNS).
-PIHOLE_URL: URL to access the Pi-hole UI.
-PIHOLE_PASSWORD: Works with Pi-hole v6. Can be your password or app password.
-PLEX_KEY: Authentication key for Plex server.
-PROWLARR_KEY: Authentication key for Prowlarr.
-RADARR_KEY: Authentication key for Radarr.
-SONARR_KEY: Authentication key for Sonarr.
+IP:               RPi server’s static IP address.
+HOMEPAGE_HOST:    Allowed hostname(s) for the Homepage dashboard.
+SSD1_DRIVE:       Mount path of the external SSD connected to the RPi.
+NPM_IP:           Internal IP address of Nginx Proxy Manager.
+NPM_URL:          URL to access the Nginx Proxy Manager UI.
+NPM_USERNAME:     Username to log in to Nginx Proxy Manager.
+NPM_PASSWORD:     Password to log in to Nginx Proxy Manager.
+PIHOLE_IP:        Internal IP address of the Pi-hole server.
+PIHOLE_URL:       URL to access the Pi-hole UI.
+PIHOLE_PASSWORD:  Pi-hole v6 password or app password.
+```
+
+**Disabled services (uncomment when re-enabling):**
+```
+# Immich (requires 6GB+ RAM):
+IMMICH_IP:              Internal IP address of the Immich server.
+IMMICH_URL:             URL to access the Immich UI.
+IMMICH_API_KEY:         Immich API key (generate in Account Settings → API Keys).
+IMMICH_DB_USERNAME:     PostgreSQL username for Immich.
+IMMICH_DB_PASSWORD:     PostgreSQL password for Immich.
+IMMICH_DB_DATABASE_NAME: PostgreSQL database name for Immich.
+IMMICH_UPLOAD_PATH:     Path on the SSD where photos/videos are stored.
+IMMICH_DB_PATH:         Path on the SSD for the Immich PostgreSQL database.
+
+# Plex stack (migrated to Stremio + RealDebrid):
+PLEX_CLAIM:           Plex account claim key for linking the server.
+PLEX_IP:              Internal IP address of the Plex server.
+PLEX_URL:             URL to access the Plex UI.
+PLEX_KEY:             Authentication key for Plex.
+PROWLARR_IP:          Internal IP address of Prowlarr.
+PROWLARR_URL:         URL to access Prowlarr UI.
+PROWLARR_KEY:         Authentication key for Prowlarr.
+RADARR_IP:            Internal IP address of Radarr.
+RADARR_URL:           URL to access Radarr UI.
+RADARR_KEY:           Authentication key for Radarr.
+SONARR_IP:            Internal IP address of Sonarr.
+SONARR_URL:           URL to access Sonarr UI.
+SONARR_KEY:           Authentication key for Sonarr.
+TRANSMISSION_IP:      Internal IP address of Transmission.
+TRANSMISSION_URL:     URL to access the Transmission UI.
+TRANSMISSION_USERNAME: Username for Transmission.
+TRANSMISSION_PASSWORD: Password for Transmission.
 ```
 3. Then, run the following command to launch all services (set `.env` file path accordingly):
 
 ```bash
-docker-compose --env-file ~/homelab/.env up -d
+docker compose --env-file ~/homelab/.env up -d
 ```
 
 4. You will have to additionally configure all settings of services via UI.
