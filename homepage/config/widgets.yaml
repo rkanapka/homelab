@@ -13,8 +13,10 @@
     label: Storage
     expanded: true
     disk:
-      - /
-      - /mnt/ssd1
+      - path: /
+        label: SD Card
+      - path: /mnt/ssd1
+        label: SSD
 
 - search:
     provider: google
