@@ -2,6 +2,12 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services
 
+- Streaming:
+    - Stremio:
+        icon: stremio.png
+        href: https://web.stremio.com/
+        description: Movies, TV shows & anime
+
 - Photos:
     - Immich:
         icon: immich.png
