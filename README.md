@@ -48,22 +48,11 @@ To re-enable, uncomment the relevant lines in `docker-compose.yml`, `homepage/do
 ---
 
 ### 🔧 Scripts
-#### **fan_control.py**  
-Used to manage CPU & GPU temperatures by controlling a 5V fan through GPIO.  
+#### **fan_control.py**
+Controls a 5V GPIO fan via an NPN transistor. Activates at 65°C, deactivates at 40°C.
 
-- **Setup**:
-  - The fan connects to an NPN 2N2222A transistor, enabling automatic on/off control via GPIO.
-  - Example circuit diagram:  
-    ![Circuit Diagram](https://github.com/user-attachments/assets/dfefdb75-9d30-48e5-855b-3c200305644f)
-- **Setup script to run automatically**
-  1. Change `/path/to/` in `fan_control.sh` to match path of `fan_control.py`
-  2. Put script in `/etc/init.d`
-  3. You can start automatic script with command `/etc/init.d/fan_control start`<br/>
-  NOTE: Check RPI temperature with command `vcgencmd measure_temp`
-  
-- **Behavior**:
-  - Fan activates at **65°C** and deactivates at **40°C** to maintain optimal temperature.
-  
+→ See [docs/fan-control.md](docs/fan-control.md) for wiring diagram and setup instructions.
+
 ---
 
 ### 🚀 How to Start the Project
@@ -129,31 +118,9 @@ docker compose --env-file ~/homelab/.env up -d
    
 5. Configure Pi-hole and Router
 
-**Router Model:** Asus RT-AX58U  
-**Firmware Version:** 3.0.0.4.388_25210  
-📘 [[Wireless Router] How to configure router to use Pi-Hole?](https://www.asus.com/support/faq/1046062/)
+   Set a static IP for the RPi, then point your router’s DNS to Pi-hole’s IP.
 
-### Step 5.1: Set a Static IP for Raspberry Pi
-
-Go to your router’s **LAN → DHCP Server** settings and assign a static IP to your Raspberry Pi.
-
-![Set Static IP](https://github.com/user-attachments/assets/56088dd1-6ec2-4bc3-9684-69129a31c641)
-
----
-
-### Step 5.2: Set Pi-hole as Your DNS Server
-
-Under **WAN → Internet Connection**, set the DNS Server fields to the Pi-hole’s static IP address.
-
-![Set DNS to Pi-hole](https://github.com/user-attachments/assets/f2209f29-fc92-478e-a934-95e3dadca035)
-
----
-
-### Step 5.3: (Optional) Allow All Origins in Pi-hole
-
-If get DNS_PROBE_FINISHED_BAD_CONFIG error, go to **Pi-hole Admin → Settings → DNS**, and enable "Permit all origins" to allow DNS requests from different devices.
-
-![Allow All Origins](https://github.com/user-attachments/assets/61172b78-edf3-44a6-898b-25cfb1a24808)
+   → See [docs/pihole-router-setup.md](docs/pihole-router-setup.md) for step-by-step instructions with screenshots.
 
 ---
 
