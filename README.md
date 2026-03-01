@@ -140,6 +140,12 @@ docker compose --env-file ~/homelab/.env up -d
 
    → See [docs/pihole-router-setup.md](docs/pihole-router-setup.md) for step-by-step instructions with screenshots.
 
+7. Configure WireGuard VPN (WG-Easy) for remote access
+
+   Set up DuckDNS, router port forwarding, and connect your devices.
+
+   → See [docs/wireguard-setup.md](docs/wireguard-setup.md) for step-by-step instructions.
+
 ---
 
 ### Screenshots
