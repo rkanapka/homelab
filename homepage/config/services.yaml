@@ -2,6 +2,19 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/services
 
+- Music:
+    - SoundVault:
+        icon: mdi-music-circle
+        href: {{HOMEPAGE_VAR_SOUNDVAULT_URL}}
+        server: my-docker
+        widget:
+          type: iframe
+          name: Sound Vault
+          src: "{{HOMEPAGE_VAR_SOUNDVAULT_URL}}/?embed=1"
+          classes: h-96 w-full
+          referrerPolicy: same-origin
+          allowFullscreen: false
+
 - Watch:
     - Stremio:
         icon: stremio.png
@@ -128,4 +141,3 @@
           url: {{HOMEPAGE_VAR_NPM_IP}}
           username: {{HOMEPAGE_VAR_NPM_USERNAME}}
           password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
-

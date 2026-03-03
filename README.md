@@ -33,6 +33,7 @@ A collection of essential services running in Docker containers, all orchestrate
 - **Vaultwarden** - Self-hosted Bitwarden-compatible password manager.
 - **Uptime Kuma** - Service uptime monitor with alerting.
 - **WG-Easy** - WireGuard VPN with web UI for remote access.
+- **Sound Vault** - [Music app](https://github.com/rkanapka/sound-vault) (Navidrome + Soulseek UI).
 
 #### ⚠️ Disabled Services
 
@@ -81,6 +82,13 @@ VAULTWARDEN_URL:  Public URL for Vaultwarden (used as the DOMAIN for HTTPS cooki
 KUMA_IP:          Internal IP address of the Uptime Kuma server.
 KUMA_URL:         URL to access the Uptime Kuma UI.
 KUMA_SLUG:        Slug of the status page created in Kuma UI (used for Homepage widget).
+SOUNDVAULT_IMAGE_TAG: Docker image tag for Sound Vault (example: 0.1.0).
+SOUNDVAULT_URL:   URL to access Sound Vault UI.
+MUSIC_DIR:        Base path for Sound Vault music stack data/library.
+NAVIDROME_USER:   Navidrome admin username used by Sound Vault API calls.
+NAVIDROME_PASS:   Navidrome admin password used by Sound Vault API calls.
+SLSKD_USERNAME:   Soulseek username for slskd.
+SLSKD_PASSWORD:   Soulseek password for slskd.
 NPM_IP:           Internal IP address of Nginx Proxy Manager.
 NPM_URL:          URL to access the Nginx Proxy Manager UI.
 NPM_USERNAME:     Username to log in to Nginx Proxy Manager.
@@ -128,6 +136,19 @@ docker compose --env-file ~/homelab/.env up -d
 ```
 
 4. You will have to additionally configure all settings of services via UI.
+
+### Optional: Music stack (layered compose)
+
+Run the Sound Vault stack (`sound-vault`, `navidrome`, `slskd`) only when needed, without adding it to the root include list:
+
+```bash
+docker compose --env-file ~/homelab/.env -f docker-compose.yml -f music/docker-compose.yml up -d
+```
+
+First run notes:
+1. Open `http://<RPi-IP>:4533` and complete the Navidrome setup wizard.
+2. Make sure `NAVIDROME_USER` and `NAVIDROME_PASS` in `.env` match that admin account.
+3. Open Sound Vault at `http://<RPi-IP>:8080` (or your `SOUNDVAULT_URL` through NPM).
 
 5. Configure Uptime Kuma status page (required for Homepage widget)
 
