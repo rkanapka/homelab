@@ -9,3 +9,14 @@ background:
   brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
   opacity: 50 # 0-100
 
+layout:
+  Music:
+    style: row
+    columns: 1
+    header: false
+  Watch:
+    style: column
+    columns: 1
+  Dev Tools:
+    style: column
+    columns: 5
