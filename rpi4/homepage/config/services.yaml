@@ -86,7 +86,7 @@
     - RPi 4 Model B:
         icon: raspberry-pi.png
         href: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
-        description: BCM2711 Quad-core A72 @ 1.8GHz · 2GB LPDDR4 · 512GB SSD · Debian 11 (bullseye)
+        description: BCM2711 Quad-core A72 @ 1.8GHz · 2GB LPDDR4 · SPCC SSD 512GB · Debian 11 (bullseye)
 
 - RPi4-Stats:
     - CPU:
@@ -125,7 +125,7 @@
     - Ninkear N10:
         icon: mdi-desktop-classic
         href: http://{{HOMEPAGE_VAR_N100_IP}}:61208
-        description: Intel N100 · 16GB DDR4 · 512GB SSD · Debian 13 (trixie)
+        description: Intel N100 · 16GB DDR4 · Quanji N300 512GB · Debian 13 (trixie)
 
 - N100-Stats:
     - CPU:
