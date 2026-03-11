@@ -20,10 +20,10 @@ Each host directory is self-contained with its own `docker-compose.yml`, `.env`,
 ### Screenshots
 
 #### Homepage dashboard
-Old version:
-![homepage](https://github.com/user-attachments/assets/6a5b1b59-a72f-49dc-9be2-526b64f997e8)
 Latest version:
-<img width="2344" height="1303" alt="image" src="https://github.com/user-attachments/assets/f784208b-07c2-401f-b7ce-ee19ca8ea911" />
+<img width="1312" height="1644" alt="image" src="https://github.com/user-attachments/assets/79c57c3a-b30f-4293-acaf-c09132604615" />
+<img width="1321" height="909" alt="image" src="https://github.com/user-attachments/assets/5ed1d0d8-746a-436b-bc6c-d3d58db901e5" />
+
 
 #### Ads Before and After running Pi-hole
 
