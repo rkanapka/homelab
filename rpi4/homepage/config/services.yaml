@@ -101,12 +101,18 @@
           url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
           version: 4
           metric: memory
-    - Storage:
+    - SD Card:
         widget:
           type: glances
           url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
           version: 4
           metric: fs:/host
+    - SSD:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
+          version: 4
+          metric: "fs:/host{{HOMEPAGE_VAR_SSD1_DRIVE}}"
     - Network:
         widget:
           type: glances

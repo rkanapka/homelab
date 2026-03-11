@@ -34,7 +34,7 @@ layout:
   RPi4-Stats:
     tab: Monitoring
     style: row
-    columns: 4
+    columns: 5
     header: false
   N100:
     tab: Monitoring
