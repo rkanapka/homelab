@@ -1,5 +1,5 @@
 rpi4-docker:
-  host: dockerproxy
+  host: dockerproxy-rpi4
   port: 2375
 
 n100-docker:

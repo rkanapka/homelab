@@ -19,6 +19,8 @@
 - **Uptime Kuma** - Service uptime monitor with alerting.
 - **WG-Easy** - WireGuard VPN with web UI for remote access.
 - **Sound Vault** - [Music app](https://github.com/rkanapka/sound-vault) (Navidrome + Soulseek UI).
+- **Glances** - System resource monitoring (CPU, memory, disk, network).
+- **Docker Socket Proxy** - Read-only Docker API proxy (port 2375, internal Docker network only) for Homepage container status widgets.
 
 ---
 
@@ -68,10 +70,12 @@ NPM_PASSWORD:     Password to log in to Nginx Proxy Manager.
 PIHOLE_IP:        Internal IP address of the Pi-hole server.
 PIHOLE_URL:       URL to access the Pi-hole UI.
 PIHOLE_PASSWORD:  Pi-hole v6 password or app password.
-N100_IP:          Static IP of the N100.
-IMMICH_IP:        Internal URL of the Immich server on the N100 (e.g. http://$N100_IP:2283).
-IMMICH_URL:       Public URL for Immich.
-IMMICH_API_KEY:   Immich API key (create in Immich UI → Account Settings → API Keys).
+N100_IP:              Static IP of the N100.
+GLANCES_RPI4_URL:     Public URL for the RPi4 Glances dashboard.
+GLANCES_N100_URL:     Public URL for the N100 Glances dashboard.
+IMMICH_IP:            Internal URL of the Immich server on the N100 (e.g. http://$N100_IP:2283).
+IMMICH_URL:           Public URL for Immich.
+IMMICH_API_KEY:       Immich API key (create in Immich UI → Account Settings → API Keys).
 ```
 
 ---
