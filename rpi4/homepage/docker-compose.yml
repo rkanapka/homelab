@@ -36,6 +36,7 @@ services:
     volumes:
       - ./config:/app/config # Make sure your local config directory exists
       - ./config/images:/app/public/images
+      - ./config/icons:/app/public/icons
       - ${SSD1_DRIVE}:/mnt/ssd1:ro
     restart: unless-stopped
 

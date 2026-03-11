@@ -2,6 +2,9 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/settings
 
+favicon: /icons/icon.png
+logo: /icons/icon.png
+
 background:
   image: /images/cyberpunk-edgerunners.jpg
   blur: sm # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
