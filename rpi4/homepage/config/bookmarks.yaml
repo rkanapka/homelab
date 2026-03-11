@@ -25,7 +25,7 @@
           icon: real-debrid.png
     - ASUS RT-AX58U:
         - abbr: RT
-          href: https://router.asus.com
+          href: http://router.asus.com
           icon: asus.png
 
 - AI:
