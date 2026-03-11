@@ -8,5 +8,5 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - /:/host:ro,rslave
     environment:
-      - GLANCES_OPT=-w
+      - GLANCES_OPT=-w -t 10
     restart: unless-stopped
