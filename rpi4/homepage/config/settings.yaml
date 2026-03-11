@@ -2,8 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/settings
 
-favicon: /icons/icon.png
-logo: /icons/icon.png
+favicon: /icons/favicon-32x32.png
 
 background:
   image: /images/cyberpunk-edgerunners.jpg
