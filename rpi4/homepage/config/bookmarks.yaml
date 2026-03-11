@@ -23,6 +23,10 @@
         - abbr: RD
           href: https://real-debrid.com/
           icon: real-debrid.png
+    - ASUS RT-AX58U:
+        - abbr: RT
+          href: http://{{HOMEPAGE_VAR_ROUTER_IP}}
+          icon: asus.png
 
 - AI:
     - Claude:
