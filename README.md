@@ -40,15 +40,6 @@ A collection of essential services running in Docker containers, all orchestrate
 **Immich** (photo & video backup — Google Photos alternative)
 Disabled: hardware requirements not met. Immich requires a minimum of 6GB RAM (recommended 8GB). The RPi 4 (2GB) is below the minimum.
 To re-enable: upgrade to hardware with 6GB+ RAM, then uncomment the relevant lines in `docker-compose.yml`, `homepage/docker-compose.yml`, and `homepage/config/services.yaml`.
-
-**Plex Stack** — migrated to Stremio + RealDebrid.
-To re-enable, uncomment the relevant lines in `docker-compose.yml`, `homepage/docker-compose.yml`, and `homepage/config/services.yaml`.
-
-- **Plex** – Media server to stream movies, TV shows, and music.
-- **Prowlarr** – Torrent indexer manager.
-- **Sonarr** – TV series downloader and organizer.
-- **Radarr** – Automated movie downloader and manager.
-- **Transmission** – Lightweight torrent client for downloading files.
 ---
 
 ### 🔧 Scripts
@@ -109,25 +100,6 @@ IMMICH_DB_PASSWORD:     PostgreSQL password for Immich.
 IMMICH_DB_DATABASE_NAME: PostgreSQL database name for Immich.
 IMMICH_UPLOAD_PATH:     Path on the SSD where photos/videos are stored.
 IMMICH_DB_PATH:         Path on the SSD for the Immich PostgreSQL database.
-
-# Plex stack (migrated to Stremio + RealDebrid):
-PLEX_CLAIM:           Plex account claim key for linking the server.
-PLEX_IP:              Internal IP address of the Plex server.
-PLEX_URL:             URL to access the Plex UI.
-PLEX_KEY:             Authentication key for Plex.
-PROWLARR_IP:          Internal IP address of Prowlarr.
-PROWLARR_URL:         URL to access Prowlarr UI.
-PROWLARR_KEY:         Authentication key for Prowlarr.
-RADARR_IP:            Internal IP address of Radarr.
-RADARR_URL:           URL to access Radarr UI.
-RADARR_KEY:           Authentication key for Radarr.
-SONARR_IP:            Internal IP address of Sonarr.
-SONARR_URL:           URL to access Sonarr UI.
-SONARR_KEY:           Authentication key for Sonarr.
-TRANSMISSION_IP:      Internal IP address of Transmission.
-TRANSMISSION_URL:     URL to access the Transmission UI.
-TRANSMISSION_USERNAME: Username for Transmission.
-TRANSMISSION_PASSWORD: Password for Transmission.
 ```
 3. Then, run the following command to launch all services (set `.env` file path accordingly):
 
