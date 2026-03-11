@@ -39,6 +39,10 @@
           icon: google-gemini.png
 
 - Media:
+    - Stremio:
+        - abbr: ST
+          href: https://web.stremio.com/
+          icon: stremio.png
     - YouTube:
         - abbr: YT
           href: https://youtube.com/
