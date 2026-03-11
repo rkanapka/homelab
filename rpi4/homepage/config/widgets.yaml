@@ -2,24 +2,6 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/service-widgets
 
-- resources:
-    label: "RPi 4 Model B · BCM2711 Quad-core A72 @ 1.8GHz · 2GB RAM"
-    cpu: true
-    cputemp: true
-    memory: true
-    uptime: true
-
-- resources:
-    label: "Storage · 32GB SD Card + 512GB SSD"
-    expanded: true
-    disk:
-      - /
-      - /mnt/ssd1
-
-- resources:
-    label: Network
-    network: eth0
-
 - search:
     provider: google
     target: _blank
