@@ -12,6 +12,7 @@
 ### 🧰 Services
 
 - **Immich** - Photo & video backup (Google Photos alternative).
+- **Docker Socket Proxy** - Read-only Docker API proxy exposed on port 2376 for Homepage on RPi4.
 
 ---
 
