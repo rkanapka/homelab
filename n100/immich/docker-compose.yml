@@ -3,7 +3,7 @@ services:
     container_name: immich_server
     image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION:-release}
     volumes:
-      - ${IMMICH_UPLOAD_PATH}:/data
+      - ${IMMICH_UPLOAD_PATH}:/usr/src/app/upload
       - /etc/localtime:/etc/localtime:ro
     environment:
       - TZ=Europe/Vilnius
@@ -12,7 +12,6 @@ services:
       - DB_PASSWORD=${IMMICH_DB_PASSWORD}
       - DB_DATABASE_NAME=${IMMICH_DB_DATABASE_NAME}
       - REDIS_HOSTNAME=immich_redis
-      - MACHINE_LEARNING_ENABLED=false
     ports:
       - 2283:2283
     depends_on:
@@ -21,6 +20,13 @@ services:
     restart: unless-stopped
     healthcheck:
       disable: false
+
+  immich-machine-learning:
+    container_name: immich_machine_learning
+    image: ghcr.io/immich-app/immich-machine-learning:${IMMICH_VERSION:-release}
+    volumes:
+      - immich-model-cache:/cache
+    restart: unless-stopped
 
   immich_redis:
     container_name: immich_redis
@@ -43,3 +49,6 @@ services:
     restart: unless-stopped
     healthcheck:
       disable: false
+
+volumes:
+  immich-model-cache:

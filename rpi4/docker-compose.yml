@@ -6,5 +6,4 @@ include:
   - uptime-kuma/docker-compose.yml
   - wg-easy/docker-compose.yml
   - sound-vault/docker-compose.yml
-  # - immich/docker-compose.yml            # disabled - hardware requirements not met (min 6GB RAM)
 

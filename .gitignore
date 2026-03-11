@@ -1,23 +1,20 @@
 .env
-plex/config/
-radarr/config/
-sonarr/config/
-prowlarr/config/
-transmission/config/
 
-homepage/config/custom.css
-homepage/config/custom.js
-homepage/config/kubernetes.yaml
-homepage/config/logs/
+# rpi4
+rpi4/homepage/config/custom.css
+rpi4/homepage/config/custom.js
+rpi4/homepage/config/kubernetes.yaml
+rpi4/homepage/config/logs/
+rpi4/homepage/config/proxmox.yaml
 
-wg-easy/data/
-vaultwarden/vw-data/
-uptime-kuma/data/
-pihole/etc-pihole/
-pihole/etc-dnsmasq.d/
-nginx-proxy-manager/data/
-nginx-proxy-manager/letsencrypt
-sound-vault/data/
+rpi4/wg-easy/data/
+rpi4/vaultwarden/vw-data/
+rpi4/uptime-kuma/data/
+rpi4/pihole/etc-pihole/
+rpi4/pihole/etc-dnsmasq.d/
+rpi4/nginx-proxy-manager/data/
+rpi4/nginx-proxy-manager/letsencrypt
+rpi4/sound-vault/data/
 
-# automatically created by homepage, safe to ignore
-homepage/config/proxmox.yaml
+# n100
+n100/immich/data/
