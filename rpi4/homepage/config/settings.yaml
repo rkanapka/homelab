@@ -46,3 +46,7 @@ layout:
     style: row
     columns: 4
     header: false
+  Router:
+    tab: Monitoring
+    style: row
+    columns: 2

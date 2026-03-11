@@ -147,3 +147,13 @@
           version: 4
           metric: network:enp2s0
 
+- Router:
+    - ASUS RT-AX58U:
+        icon: asus.png
+        description: Wi-Fi 6 · AX3000 · Dual Band
+    - Network:
+        widget:
+          type: asuswrt
+          url: http://{{HOMEPAGE_VAR_ROUTER_IP}}
+          username: {{HOMEPAGE_VAR_ROUTER_USERNAME}}
+          password: {{HOMEPAGE_VAR_ROUTER_PASSWORD}}
