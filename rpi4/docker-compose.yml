@@ -6,4 +6,5 @@ include:
   - uptime-kuma/docker-compose.yml
   - wg-easy/docker-compose.yml
   - sound-vault/docker-compose.yml
+  - glances/docker-compose.yml
 

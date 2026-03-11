@@ -1,0 +1,12 @@
+services:
+  glances:
+    image: nicolargo/glances:3-full
+    container_name: glances
+    pid: host
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /:/host:ro,rslave
+    environment:
+      - GLANCES_OPT=-w
+    restart: unless-stopped

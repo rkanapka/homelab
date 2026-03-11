@@ -2,6 +2,18 @@ include:
   - immich/docker-compose.yml
 
 services:
+  glances:
+    image: nicolargo/glances:latest-full
+    container_name: glances
+    pid: host
+    network_mode: host
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /:/host:ro,rslave
+    environment:
+      - GLANCES_OPT=-w
+    restart: unless-stopped
+
   dockerproxy-n100:
     image: ghcr.io/tecnativa/docker-socket-proxy:latest
     container_name: dockerproxy-n100

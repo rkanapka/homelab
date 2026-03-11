@@ -80,3 +80,70 @@
           url: {{HOMEPAGE_VAR_NPM_IP}}
           username: {{HOMEPAGE_VAR_NPM_USERNAME}}
           password: {{HOMEPAGE_VAR_NPM_PASSWORD}}
+
+
+- RPi4:
+    - RPi 4 Model B:
+        icon: raspberry-pi.png
+        href: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
+        description: BCM2711 Quad-core A72 @ 1.8GHz · 2GB LPDDR4 · 512GB SSD · Debian 11 (bullseye)
+
+- RPi4-Stats:
+    - CPU:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
+          version: 4
+          metric: cpu
+    - Memory:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
+          version: 4
+          metric: memory
+    - Storage:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
+          version: 4
+          metric: fs:/host
+    - Network:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
+          version: 4
+          metric: network:eth0
+
+
+- N100:
+    - Ninkear N10:
+        icon: mdi-desktop-classic
+        href: http://{{HOMEPAGE_VAR_N100_IP}}:61208
+        description: Intel N100 · 16GB DDR4 · 512GB SSD · Debian 13 (trixie)
+
+- N100-Stats:
+    - CPU:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
+          version: 4
+          metric: cpu
+    - Memory:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
+          version: 4
+          metric: memory
+    - Storage:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
+          version: 4
+          metric: fs:/host
+    - Network:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
+          version: 4
+          metric: network:enp2s0
+

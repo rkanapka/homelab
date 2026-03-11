@@ -9,14 +9,40 @@ background:
   brightness: 50 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
   opacity: 50 # 0-100
 
+pages:
+  - name: Home
+  - name: Monitoring
+    icon: mdi-chart-line
+
 layout:
   Music:
+    tab: Home
     style: row
     columns: 1
     header: false
-  Watch:
-    style: column
-    columns: 1
+  Photos:
+    tab: Home
   Dev Tools:
+    tab: Home
     style: column
     columns: 5
+  RPi4:
+    tab: Monitoring
+    style: row
+    columns: 1
+    header: false
+  RPi4-Stats:
+    tab: Monitoring
+    style: row
+    columns: 4
+    header: false
+  N100:
+    tab: Monitoring
+    style: row
+    columns: 1
+    header: false
+  N100-Stats:
+    tab: Monitoring
+    style: row
+    columns: 4
+    header: false
