@@ -21,6 +21,8 @@
         icon: immich.png
         href: {{HOMEPAGE_VAR_IMMICH_URL}}
         description: Photo & video management
+        server: n100-docker
+        container: immich_server
         widget:
           type: immich
           url: {{HOMEPAGE_VAR_IMMICH_IP}}

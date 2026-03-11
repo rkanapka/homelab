@@ -1,3 +1,7 @@
 my-docker:
   host: dockerproxy
   port: 2375
+
+n100-docker:
+  host: {{HOMEPAGE_VAR_N100_IP}}
+  port: 2376
