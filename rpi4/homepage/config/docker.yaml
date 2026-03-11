@@ -1,4 +1,4 @@
-my-docker:
+rpi4-docker:
   host: dockerproxy
   port: 2375
 

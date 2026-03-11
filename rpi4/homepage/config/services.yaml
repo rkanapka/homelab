@@ -6,7 +6,7 @@
     - SoundVault:
         icon: mdi-music-circle
         href: {{HOMEPAGE_VAR_SOUNDVAULT_URL}}
-        server: my-docker
+        server: rpi4-docker
         widget:
           type: iframe
           name: Sound Vault
@@ -35,7 +35,7 @@
         icon: uptime-kuma.png
         href: {{HOMEPAGE_VAR_KUMA_URL}}
         description: Service uptime monitor
-        server: my-docker
+        server: rpi4-docker
         container: uptime-kuma
         widget:
           type: uptimekuma
@@ -46,21 +46,21 @@
         icon: wireguard.png
         href: {{HOMEPAGE_VAR_WGEASY_URL}}
         description: WireGuard VPN
-        server: my-docker
+        server: rpi4-docker
         container: wg-easy
 
     - Vaultwarden:
         icon: vaultwarden.png
         href: {{HOMEPAGE_VAR_VAULTWARDEN_URL}}
         description: Password manager
-        server: my-docker
+        server: rpi4-docker
         container: vaultwarden
 
     - Pi-hole:
         icon: pi-hole.png
         href: {{HOMEPAGE_VAR_PIHOLE_URL}}
         description: Network-wide ad blocker
-        server: my-docker
+        server: rpi4-docker
         container: pihole
         widget:
           type: pihole
@@ -73,7 +73,7 @@
         icon: nginx-proxy-manager.png
         href: {{HOMEPAGE_VAR_NPM_URL}}
         description: Proxy, SSL & traffic manager
-        server: my-docker
+        server: rpi4-docker
         container: nginx-proxy-manager
         widget:
           type: npm
