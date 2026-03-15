@@ -107,7 +107,7 @@
           url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
           version: 4
           metric: fs:/host
-    - SSD:
+    - SSD SPCC 512GB:
         widget:
           type: glances
           url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
@@ -140,7 +140,7 @@
           url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
           version: 4
           metric: memory
-    - Storage:
+    - SSD Quanji 512GB:
         widget:
           type: glances
           url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
