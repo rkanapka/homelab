@@ -2,12 +2,16 @@
 
 import subprocess
 import time
+from datetime import datetime
 
 from gpiozero import OutputDevice
 
 
 ON_THRESHOLD = 65  # (degrees Celsius) Fan kicks on at this temperature.
-OFF_THRESHOLD = 40  # (degress Celsius) Fan shuts off at this temperature.
+OFF_THRESHOLD = 50  # (degrees Celsius) Fan shuts off at this temperature.
+NIGHT_OVERRIDE_THRESHOLD = 75  # (degrees Celsius) Fan runs at night only above this temperature.
+NIGHT_START = 23  # (hour) Start of quiet night hours.
+NIGHT_END = 7  # (hour) End of quiet night hours.
 SLEEP_INTERVAL = 5  # (seconds) How often we check the core temperature.
 GPIO_PIN = 17  # Which GPIO pin you're using to control the fan.
 
@@ -37,14 +41,18 @@ if __name__ == '__main__':
 
     while True:
         temp = get_temp()
+        hour = datetime.now().hour
+        is_night = hour >= NIGHT_START or hour < NIGHT_END
+        effective_on_threshold = NIGHT_OVERRIDE_THRESHOLD if is_night else ON_THRESHOLD
+
         # Start the fan if the temperature has reached the limit and the fan
         # isn't already running.
         # NOTE: `fan.value` returns 1 for "on" and 0 for "off"
-        if temp > ON_THRESHOLD and not fan.value:
+        if temp > effective_on_threshold and not fan.value:
             fan.on()
 
         # Stop the fan if the fan is running and the temperature has dropped
-        # to 10 degrees below the limit.
+        # to below the off threshold.
         elif fan.value and temp < OFF_THRESHOLD:
             fan.off()
 

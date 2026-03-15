@@ -12,8 +12,8 @@ Example circuit diagram:
 
 ## Behavior
 
-- Fan activates at **65°C**
-- Fan deactivates at **40°C**
+- Fan activates at **65°C** (or **75°C** during quiet night hours: 23:00-07:00)
+- Fan deactivates at **50°C**
 
 Check current CPU temperature:
 ```bash

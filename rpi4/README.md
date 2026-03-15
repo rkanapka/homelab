@@ -27,7 +27,7 @@
 ### 🔧 Scripts
 
 #### **fan_control.py**
-Controls a 5V GPIO fan via an NPN transistor. Activates at 65°C, deactivates at 40°C.
+Controls a 5V GPIO fan via an NPN transistor. Activates at 65°C (75°C during 23:00-07:00), deactivates at 50°C.
 
 → See [../docs/fan-control.md](../docs/fan-control.md) for wiring diagram and setup instructions.
 
