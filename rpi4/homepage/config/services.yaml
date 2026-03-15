@@ -112,7 +112,7 @@
           type: glances
           url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
           version: 4
-          metric: "fs:/host{{HOMEPAGE_VAR_SSD1_DRIVE}}"
+          metric: "fs:/host{{HOMEPAGE_VAR_RPI4_SSD1_DRIVE}}"
     - Network:
         widget:
           type: glances

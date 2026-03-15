@@ -45,7 +45,7 @@ Copy `.env.sample` → `.env` and fill in:
 ```
 IP:               RPi server's static IP address.
 HOMEPAGE_HOST:    Allowed hostname(s) for the Homepage dashboard.
-SSD1_DRIVE:       Mount path of the external SSD connected to the RPi.
+RPI4_SSD1_DRIVE:  Mount path of the external SSD connected to the RPi.
 WG_HOST:          Public hostname for WireGuard (your DuckDNS domain, e.g. yourdomain.duckdns.org).
 WG_PASSWORD_HASH: Bcrypt hash of the WG-Easy web UI password. Generate with:
                   docker run --rm ghcr.io/wg-easy/wg-easy wgpw YOUR_PASSWORD

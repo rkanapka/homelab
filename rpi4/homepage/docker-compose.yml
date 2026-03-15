@@ -6,7 +6,7 @@ services:
       HOMEPAGE_ALLOWED_HOSTS: ${HOMEPAGE_HOST}
       PUID: 1000 # optional, your user id
       PGID: 1000 # optional, your group id
-      HOMEPAGE_VAR_SSD1_DRIVE: ${SSD1_DRIVE}
+      HOMEPAGE_VAR_RPI4_SSD1_DRIVE: ${RPI4_SSD1_DRIVE}
       HOMEPAGE_VAR_SERVER_IP: ${IP}
       # Active services
       HOMEPAGE_VAR_WGEASY_IP: ${WGEASY_IP}
@@ -38,7 +38,7 @@ services:
       - ./config:/app/config # Make sure your local config directory exists
       - ./config/images:/app/public/images
       - ./config/icons:/app/public/icons
-      - ${SSD1_DRIVE}:/mnt/ssd1:ro
+      - ${RPI4_SSD1_DRIVE}:/mnt/ssd1:ro
     restart: unless-stopped
 
   dockerproxy-rpi4:
