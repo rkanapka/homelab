@@ -27,7 +27,7 @@ docker compose --env-file .env up -d
 Copy `.env.sample` → `.env` and fill in:
 
 ```
-SSD1_DRIVE:              Mount path of the SSD.
+N100_SSD1_DRIVE:         Mount path of the SSD.
 IMMICH_VERSION:          Immich image tag (default: release).
 IMMICH_UPLOAD_PATH:      Path on the SSD where photos/videos are stored.
 IMMICH_DB_PATH:          Path on the SSD for the Immich PostgreSQL database.

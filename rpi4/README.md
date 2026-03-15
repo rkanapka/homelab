@@ -71,6 +71,7 @@ PIHOLE_IP:        Internal IP address of the Pi-hole server.
 PIHOLE_URL:       URL to access the Pi-hole UI.
 PIHOLE_PASSWORD:  Pi-hole v6 password or app password.
 N100_IP:              Static IP of the N100.
+N100_SSD1_DRIVE:      Mount path of the N100's storage SSD (used by Homepage Glances widget).
 GLANCES_RPI4_URL:     Public URL for the RPi4 Glances dashboard.
 GLANCES_N100_URL:     Public URL for the N100 Glances dashboard.
 IMMICH_IP:            Internal URL of the Immich server on the N100 (e.g. http://$N100_IP:2283).
