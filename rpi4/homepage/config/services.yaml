@@ -146,6 +146,12 @@
           url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
           version: 4
           metric: fs:/host
+    - SSD BX500 1TB:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
+          version: 4
+          metric: "fs:/host{{HOMEPAGE_VAR_N100_SSD1_DRIVE}}"
     - Network:
         widget:
           type: glances
