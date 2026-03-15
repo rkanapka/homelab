@@ -95,6 +95,12 @@
           url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
           version: 4
           metric: cpu
+    - Temperature:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_SERVER_IP}}:61208
+          version: 4
+          metric: sensor:cpu_thermal 0
     - Memory:
         widget:
           type: glances
@@ -140,6 +146,12 @@
           url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
           version: 4
           metric: memory
+    - Temperature:
+        widget:
+          type: glances
+          url: http://{{HOMEPAGE_VAR_N100_IP}}:61208
+          version: 4
+          metric: "sensor:Package id 0"
     - SSD Quanji 512GB:
         widget:
           type: glances
